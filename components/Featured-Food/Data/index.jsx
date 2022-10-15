@@ -1,71 +1,58 @@
-import React from 'react';
-import Link from "next/link";
+const data = [
+    {
+        id: 1,
+        title: "Lavadora LG",
+        description: "Lavadora LG Smart Motion Carga Superior WT16BSB 16Kg Negro claro",
+        image_url: "https://acortar.link/TvP3Qg",
+        price: 1299,
+        rating: 5,
+        route: "lavadora"
+    },
+    {
+        id: 2,
+        title: "Refrigeradora",
+        description: "Refrigeradora LG Side By Side 616 L con Door Cooling LS66SPG Plateado",
+        image_url: "https://acortar.link/ZeQrTY",
+        price: 1599,
+        rating: 5,
+        route: "refrigeradora"
+    },
+    {
+        id: 3,
+        title: "Cocina a Gas",
+        description: "Cocina a Gas LG RSG314M con 6 Hornillas Acero inoxidable.",
+        image_url: "https://acortar.link/I0DfGo",
+        price: 799,
+        rating: 5,
+        route: "cocinadegas"
+    },
+    {
+        id: 4,
+        title: "Laptop Lenovo",
+        description: 'Laptop Lenovo IdeaPad 3i 14" HD Intel Core i3 4GB RAM 256GB SSD',
+        image_url: "https://acortar.link/yyAyQ3",
+        price: 1499,
+        rating: 4,
+        route: "laptoplenovo"
+    },
+    {
+        id: 5,
+        title: "Tablet Lenovo",
+        description: 'Tablet Lenovo 11 YOGA Tab 11" 4GB RAM 128GB ZA8W0076PE',
+        image_url: "https://acortar.link/1NTgXd",
+        price: 899,
+        rating: 3,
+        route: "tablet"
+    },
+    {
+        id: 6,
+        title: "Televisor Samsung",
+        description: 'Televisor Samsung 65" AU7090 UHD 4K Smart TV 2021 UN65AU7090GXPE',
+        image_url: "https://acortar.link/0dPU4x",
+        price: 1599,
+        rating: 4,
+        route: "televisor"
+    }
+];
 
-// React Icons
-import { HiOutlineArrowNarrowRight } from "react-icons/hi";
-import { MdStar, MdOutlineAddShoppingCart } from "react-icons/md";
-
-// Featured Food Data
-import foods from './data/data.js';
-
-const FeaturedFood = () => {
-  return (
-    <div className="mb-2 mt-16 pt-0">
-        <div className="flex flex-col justify-center items-center gap-1 sm:flex-row sm:justify-between sm:gap-0">
-            <h1 className="text-3xl font-bold sm:text-4xl">Ofertas del día</h1>
-            <Link href="/menu">
-                <a className="flex justify-center items-center gap-1 text-rose-600" title="See All">
-                  <span>ver todas las ofertas</span>
-                  <HiOutlineArrowNarrowRight />
-                </a>
-            </Link>
-        </div>
-        <div className="my-5 grid place-items-center grid-cols-1 gap-1 md:grid-cols-3 sm:grid-cols-2">
-          {
-            foods ? 
-              foods.map((food, index) =>
-                <div key={index} className="card relative bg-gray-200 rounded-xl overflow-hidden shadow-slate-900" title={food.title}>
-                  <div className="absolute top-1 right-0 px-3 z-50">
-                    <button className="bg-white text-sky-600 text-xl h-10 w-10 flex justify-center items-center rounded-md font-normal active:scale-95" title="Add To Cart">
-                      <MdOutlineAddShoppingCart />
-                    </button>
-                  </div>
-                  <Link href={`/${food.route}`}>
-                    <a>
-                      <div className="relative">
-                        <img src={food.image_url} alt="Food-Image" max-height="200px" width="100%" className="meal-img ease-in-out duration-300" />
-                        <div className="info absolute left-0 bottom-0 bg-sky-600 p-3 pb-4 ease-in-out duration-300 opacity-0">
-                          <h3 className="flex justify-between items-center text-xl font-semibold mb-1 text-white">
-                            <span>{food.title}</span>
-                            <span>S/ {food.price}</span>
-                          </h3>
-                          <p className="text-sm text-gray-50 mb-2">{food.description}</p>
-                          <span className="text-xl text-yellow-600 flex items-center gap-1">
-                            {
-                              Array.from({ length: food.rating }).map((_, index) => (
-                                <MdStar key={index}/>
-                              ))
-                            }
-                          </span>
-                        </div>
-                      </div>
-                    </a>
-                  </Link>
-                </div>
-              )
-            : null
-          }
-        </div>
-        <div className="flex justify-center items-center">
-          <Link href="/menu">
-            <a className="flex justify-center items-center gap-2 text-rose-600 font-semibold bg-white w-max m-auto py-2 px-4 border border-rose-600 ease-in-out duration-150 hover:bg-rose-600 hover:text-white rounded-md md:py-3 md:px-6" title="See All">
-              <span>Ver todas las ofertas</span>
-              <HiOutlineArrowNarrowRight />
-            </a>
-          </Link>
-        </div>
-    </div>
-  )
-}
-
-export default FeaturedFood;
+export default data;

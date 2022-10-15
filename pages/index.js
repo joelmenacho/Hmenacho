@@ -2,16 +2,17 @@ import React from "react";
 import Head from 'next/head';
 
 // Components
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import FeaturedFood from '../components/Featured-Food';
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import FeaturedFood from "../components/Featured-Food/Data";
 import ServicesBanner from "../components/Services-Banner";
 import AboutUsBanner from "../components/AboutUs-Banner";
 import Subscription from "../components/Subscription";
 import Footer from "../components/Footer";
 
+
 // Scroll To Top Hook
-import useScrollTop from '../Hooks/useScrollTop';
+import useScrollTop from "../Hooks/useScrollTop";
 
 export default function Home() {
 
