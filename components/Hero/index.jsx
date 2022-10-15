@@ -6,24 +6,27 @@ import { GiHamburger } from "react-icons/gi";
 
 const Hero = () => {
   return (
-    <div className="py-8 grid grid-cols-1 place-items-center gap-0 lg:grid-cols-2 lg:gap-10 md:py-32">
-        <div className="mb-16 text-center lg:mb-0 lg:text-left">
-            <h1 className="text-4xl font-bold leading-12 md:text-6xl">
-                En HogarMenacho te enviamos en   <span className="text-red-500">24 Horas</span> Partner.
+    <div className="py-4 grid grid-cols-1 place-items-center gap-0 lg:grid-cols-2 lg:gap-10 md:py-5">
+        <div className="mb-12 text-center lg:mb-0 lg:text-left">
+            <h1 className="text-4xl font-bold leading-8 md:text-6xl">
+                En Hogar Menacho los envios son<span className="text-red-500"> GRATIS</span> .
             </h1>
-            <p className="my-6 text-gray-600 leading-8">
-            Con HM Envíos, los productos que superen los S/ 79 tienen envío gratis y te ayudamos con el 50% del costo de envío.
+            <p className="my-6 text-gray-900 leading-6">
+            Los productos que superen los S/ 79 tienen envío gratis y te ayudamos con el 50% del costo de envío.
             </p>
             <Link href="/menu">
-                <a className="flex justify-center items-center gap-2 w-max m-auto py-2 px-4 bg-red-500 text-white font-bold border border-red-500 rounded-md ease-in-out duration-150 shadow-slate-600 hover:bg-white hover:text-red-500 lg:m-0 md:py-3 md:px-6" title="Order Now">
-                    <span>Pedir ahora</span>
+                <a className="flex justify-center items-center gap-1 w-max m-auto 
+                py-0.5 px-1 bg-red-500 text-white font-bold border border-red-500 
+                rounded-md ease-in-out duration-150 shadow-slate-600 hover:bg-white 
+                hover:text-red-500 lg:m-0 md:py-3 md:px-6" title="Order Now">
+                    <span>Pedir AHORA</span>
 
                 </a>
             </Link>
         </div>
 
         <div>
-            <img src="./on_the_way.svg" alt="Delivering-A-Package" />
+            <img src="./header-lifestyle-ld.png" alt="Online-Groceries" width="900px" max-width="50%" />
         </div>
     </div>
   )
